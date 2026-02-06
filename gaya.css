@@ -1,0 +1,96 @@
+/* *{
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+} */
+
+.navbar {
+        background-color: #98988c; 
+}
+
+.nav-item a:hover{
+    color: #ffee00 !important;
+    
+}
+
+.motto-img{
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    height: 200px !important;
+    color: #ffffff !important;
+}
+.col-md-4 .d-flex img{
+    margin-left: calc(-10.5 * var(--bs-gutter-x)) !important;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        background-color: #ffffff !important; 
+
+    }
+
+    .nav-item a{
+        color: #000000 !important;
+    }
+
+    /* .side-menu {
+     
+    } */
+
+    /* Class yang akan dipicu JavaScript */
+    .side-menu.in {
+        transform: translateX(0);
+        box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    }
+
+    .text-responsive{
+        font-size: 25px !important;
+
+    }
+
+    .img-responsive{
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .carousel-control-prev{
+        display: none !important;
+    }
+    .carousel-control-next{
+        display: none !important;
+    }
+
+    /* .navbar-toggler-icon {
+        color: #ffee00 !important;
+    } */
+
+    .carousel-indicators .active {
+        background-color: #ffee00 !important;
+        opacity: 1;
+}
+
+}
+
+.logo-container {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 120px; /* Menyamakan tinggi box logo */
+            transition: transform 0.3s ease;
+        }
+        /* .logo-item:hover {
+            transform: scale(1.05);
+        } */
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* Filter grayscale opsional jika ingin terlihat seragam */
+            /* filter: grayscale(100%); */
+        }

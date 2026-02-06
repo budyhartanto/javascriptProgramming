@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet"
+            href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- start perhitung angsuran -->
+        <div class="container">
+
+            <h1 class="mt-5 text-center">Login</h1>
+
+            <form id="pinjaman">
+                <label>Pinjaman</label><br>
+                <input class="form-control" type="number" id="nilai1"><br>
+
+                <label>Bunga</label><br>
+                <input class="form-control" type="number" id="nilai2"><br>
+
+                <label>Tenor</label><br>
+                <input class="form-control" type="number" id="nilai3"><br><br>
+
+                <button class="btn btn-primary" type="button"
+                    id="btnHitung">Hitung Tenor</button>
+
+            </form>
+
+        </div>
+        <!-- End perhitung angsuran -->
+
+        <!-- Start search dengan loopingan -->
+        <div class="container mb-5">
+
+            <h1 class="mt-5 text-center">Loopingan</h1>
+
+            <form id="looping">
+                <label>NIK</label><br>
+                <input class="form-control" type="number" id="nik"><br>
+                <label>Password</label><br>
+                <input class="form-control" type="password" id="pwd"><br>
+
+                <!-- <button class="btn btn-warning px-5" type="button"
+                    onclick="login()">Cari</button> -->
+                <button class="btn btn-warning px-5" type="button"
+                    id="btnCari">Cari</button>
+
+            </form>
+
+        </div>
+        <!-- End search dengan loopingan -->
+
+    </body>
+
+    <script type="module" src="app.js"></script>
+
+    <!-- Start perhitung angsuran Javascript -->
+    <!-- <script>
+        function hitung() {
+            let pinjamanInput = document.getElementById('nilai1').value; // input pinjaman
+            console.log(pinjamanInput) 
+            
+            let bunga = document.getElementById('nilai2').value; // input bunga
+            console.log(bunga)
+            
+            let tenor = document.getElementById('nilai3').value; // input tenor
+            console.log(tenor)
+            
+            // perhitungan bunga flat
+            let instalment = pinjamanInput / tenor; //pinjaman * tenor
+            console.log(instalment);
+
+            let totalBunga = instalment * (bunga / 100); // cicilan * bunga%
+            console.log(totalBunga);
+
+            totalBeban = instalment + totalBunga; //pokok + bunga
+            console.log("Total angsuran perbulan : " + totalBeban);
+
+            window.alert(totalBeban);
+            
+            
+        } -->
+
+        <!-- Start loopingan cari -->
+
+        <!-- function cari() {
+            var loop1 = ["Abang","Babi","Cacing","Delman","Eek"];
+            var searching = document.getElementById("cari1").value;
+        }
+
+        for (let i = 0; i < 5 ; i++) {
+            console.log("ini adalah huruf ke-"+ i );
+        } -->
+
+        <!-- // bikin login javascript -->
+
+        <!-- // var nama = "budy";
+        // function login() {
+        //     var nama1 = document.getElementById("cari1").value;
+        //     console.log(nama1);
+        // try {
+        //     if(nama1==nama){
+        //         window.location.href = "coba.html"
+        //     }
+        //     else{
+        //         throw "nama salah!";
+        //     }
+        // } catch (error) {
+        //     alert("Error: " + error);            
+        // }
+        // }
+
+        // loop1.forEach(element => {
+        // if (element.toLowerCase().includes(cari.toLowerCase())) {
+        //     console.log("Ditemukan: " + element);
+        // }
+        // });
+
+        // End loopingan cari -->
+        
+
+    <!-- </script> -->
+    <!-- End perhitung angsuran Javascript -->
+
+</html>
