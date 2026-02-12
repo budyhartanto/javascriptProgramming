@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box</title>
+
+    <style>
+      body {
+        padding: 0px; /*area dalam margin*/
+        margin: 0px; /*area paling luar*/
+      }
+
+      div {
+        padding: 0px; /*area dalam margin*/
+        margin: 0px; /*area paling luar*/
+        background-color: pink;
+      }
+
+      p {
+        padding: 0px; /*area dalam margin*/
+        margin: 0px; /*area paling luar*/
+        text-align: justify;
+      }
+
+      .artikel1 {
+        height: 200px;
+        background-color: aqua;
+        width: 200px;
+        padding: 10px 20px 10px 20px; /*atas kanan bawah kiri*/
+        margin: 10px 20px 10px 20px; /*atas kanan bawah kiri*/
+      }
+
+      .artikel2 {
+        height: 150px;
+        width: 300px;
+        padding: 20px; /*area dalam margin*/
+        margin: 10px 20px 10px 20px; /*atas kanan bawah kiri*/
+      }
+
+      /* catatan :
+      jika ada 2 box menggunakan css margin yang saling bertemu maka yang akan dibaca adalah margin yang terbesar antara 2 box tersebut */
+      /* di html ada :
+      KONTEN di tengah,
+      PADDING penutup konten,
+      BORDER penutup padding,
+      MARGIN pemutup border. */
+      
+    </style>
+  </head>
+  <body>
+    <div class="artikel1">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        ratione blanditiis quasi provident laboriosam consequatur, labore
+        necessitatibus itaque hic ex amet quibusdam deserunt eius, dolor
+        quisquam, sunt soluta repellat iusto?
+      </p>
+    </div>
+
+    <div class="artikel2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam nisi
+        ipsa perferendis repellat earum aut adipisci rem quas blanditiis,
+        explicabo cumque asperiores animi, iste nobis expedita maiores quae
+        obcaecati!
+      </p>
+    </div>
+  </body>
+</html>

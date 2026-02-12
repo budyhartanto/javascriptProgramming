@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+
+    <style>
+        /* cara ubah p di dalam div */
+        /* div p{
+            color: red;
+        } */
+
+        /* child selector ambil semua p yang anak langsung dari div */
+        /* div > p{ 
+            color: red;
+        } */
+
+        /*Adjacent Sibling Selector memilih element setelah element tapi cuman 1 setelahnya */
+        /* div + p{
+            color: red;
+        } */
+        /* General Sibling ambil semua p yang anak langsung dari div semua p */
+        div ~ p{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <article>
+            <p>Ini Artikel</p>
+        </article>
+        <p>Ini Arikel</p>
+    </div>
+    <p>Ini Artikel</p>
+    <p>Sub Artikel</p>
+</body>
+</html>
