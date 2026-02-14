@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.logo-header{
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-left: 40px;
+    /* padding-top: 10px; */
+}
+
+.img_slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menu-list{
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+    /* width: 100%; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* z-index: 1000; */
+    background: #aaaaa3;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* width: 40%; */
+  /* background-color: #aaaaa3; */
+  font-weight: bold;
+}
+
+ul li {
+  float: left;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+nav ul li a:hover {
+  color: #ffff00;
+}   
+
+
+/* Hamburger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #3a3939;
+    border-radius: 3px;
+    transition: all 0,5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+   transform-origin: 0 0; 
+}
+
+.menu-toggle span:nth-child(4){
+   transform-origin: 0 100%; 
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: #f8e801;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: #f8e801;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
+}
+
+
+
+/* Navbar Menu Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {  
+    nav ul {
+        width: 100%;
+        
+    } 
+
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {  
+    .menu-toggle{
+        display: flex;
+        margin-left: 20px;
+    }
+
+    .img_slider {
+        padding-top: 20px;  
+    }
+
+    nav ul {
+        position: fixed;
+        top: 60px;           
+        left: 0;
+        width: 160px;
+        padding: 10px 15px;        
+        background-color: #635d5d;
+        box-shadow: 0 1px 4px #00000026;
+        z-index: 15;
+
+        transform: translateX(-105%);
+        opacity: 0;
+        transition: 0.3s ease;; 
+    } 
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.8s;
+        
+    }
+
+    .menu-list{
+        background: #ffffff;
+        padding: 100px 20px;
+        box-sizing: border-box;
+        margin: 1px;
+        padding: 1px;
+    }
+
+    .logo-header img{
+        position: absolute;
+        left: 50%;
+        height: 50px;
+        transform: translateX(-50%);
+    }
+}
+
+/* style img proyek */
+
+.proyek {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.kotak {
+    width: 400px !;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.img-respon {
+    width: 15%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* proyek responsive */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .img-respon {
+        width: 60px;
+    }
+}
+
+/* Motto perusahaan */
+.img-motto{
+    background-image: url('../asset/img/gambar_motto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 200px;
+    color: #ffffff;      
+}
+
+
+.kata h2{
+    position: relative;
+    left: 200px;
+    font-size: 3rem;
+    top: 60px;
+    /* margin: 0;
+    padding-right: 50px; 
+    display: flex;
+    justify-content: left;
+    align-items: center;  */
+}
+
+@media (max-width: 768px) {
+    .kata h2{
+        left: 0;
+        text-align: center;
+        font-size: 2rem;
+        top: 50px;
+        margin-bottom: 25px;
+        /* border-right: 1px solid rgba(0, 255, 42, 0.918); */
+    }
+}
+
+.motto_dua h4{
+    position: relative;
+    font-size: 1rem;
+    right: -500px;
+    top: 20px;
+    /* font-size: 22px;
+    font-weight: normal;
+    margin-top: -50px; */
+    /* font-weight: normal;
+    margin-top: 10px; */
+    /* margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.4; */
+}
+
+@media (max-width: 768px) {
+    .motto_dua h4{
+        left: 0;
+        text-align: center;
+        font-size: 1rem;
+        top: 50px;
+    }
+}
+
+
+/* Text About */
+.about-us{
+    text-align: center;
+    padding: 20px;
+}
+
+.about{
+    text-align: center;   
+}
+
+.text-explain{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-explain p{
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333333;
+    margin: 0;
+    margin-top: 23px;
+}
+
+/* client */
+.box-image{
+    background-image: linear-gradient(rgba(223, 221, 221, 0.4)) !important;
+}
+
+/* contact */
+.box-kontak{
+    background-image: linear-gradient(rgba(87, 86, 86, 0.4)) !important;
+}

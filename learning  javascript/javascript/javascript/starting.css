@@ -1,0 +1,43 @@
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+pre {
+    color: rgb(255, 255, 0) !important;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+
+.header {
+    background-color: #df02ef;
+    padding: 20px;
+    text-align: center;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.all-center {
+    text-align: center;
+    /* background-color: white; */
+    width: 100%;
+    /* height: 50px; */
+}
