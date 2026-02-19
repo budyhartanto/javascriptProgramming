@@ -4,11 +4,16 @@
     box-sizing: border-box !important;
 } */
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#heading{
+#heading {
   font-weight: bold;
 }
 
@@ -29,6 +34,14 @@ h1, h2, h3, h4, h5, h6{
 }
 .col-md-4 .d-flex img {
   margin-left: calc(-10.5 * var(--bs-gutter-x)) !important;
+}
+
+/* Garis Vertikal */
+.divider {
+  width: 1px;
+  height: 40px; /* Sesuaikan tinggi garis */
+  background-color: white;
+  margin: 0 20px;
 }
 
 @media screen and (max-width: 991px) {
@@ -67,8 +80,8 @@ h1, h2, h3, h4, h5, h6{
   }
 
   /* .navbar-toggler-icon {
-        color: #ffee00 !important;
-    } */
+    color: #ffee00 !important;
+  } */
 
   .carousel-indicators .active {
     background-color: #ffee00 !important;
@@ -112,6 +125,208 @@ h1, h2, h3, h4, h5, h6{
   background-color: #666666;
 }
 
-.contact h2{
-    color: #ffffff;
+.contact h2 {
+  color: #ffffff;
+}
+
+/* Container ikon */
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* BIKIN SIKU KUNING DI LOGO TEAM */
+/* Container pembungkus harus punya ukuran pasti agar logo TIDAK bergerak */
+.corner-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px; /* Sesuaikan: Lebar total saat siku melebar */
+  height: 110px; /* Sesuaikan: Tinggi total saat siku melebar */
+  transition: all 0.4s ease;
+}
+
+/* Base style siku */
+.corner {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ffc107;
+  transition: all 0.4s ease-in-out;
+}
+
+/* POSISI AWAL (Melebar/Jauh) */
+.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* --- LOGIKA HOVER TEGAS --- */
+
+/* Saat hover, kita paksa posisi siku mendekat ke tengah (ikon) */
+/* Karena lebar ikon 60px, kita dekatkan siku ke posisi sekitar 15-20% dari tepi */
+
+.service-item:hover .top-left {
+  top: 15px;
+  left: 15px;
+}
+.service-item:hover .top-right {
+  top: 15px;
+  right: 15px;
+}
+.service-item:hover .bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+.service-item:hover .bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* Pastikan logo tetap diam tanpa gangguan */
+.service-item img {
+  display: block;
+  transition: none; /* Logo tidak boleh bergerak */
+}
+
+/* BIKIN BOTTOM CONTACT */
+/* Container Utama */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  color: #ffffff;
+  background-color: #98988c; /* Warna sesuai gambar baru */
+  gap: 20px;
+  /* Di desktop tetap center atau space-between */
+  justify-content: space-between;
+}
+
+/* Pengaturan Kolom */
+.footer-column {
+  /* Desktop: 3 kolom (100% / 3) */
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 250px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column; /* Ini yang bikin dia baris ke bawah */
+  gap: 10px; /* Memberi jarak antar baris */
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column; /* Ini yang bikin dia baris ke bawah */
+  gap: 10px; /* Memberi jarak antar baris */
+}
+
+/* --- KUNCI JAWABANNYA DI SINI (Tablet Mode) --- */
+@media (max-width: 1024px) {
+  .footer-container {
+    /* Pastikan rata kiri, agar kolom bawah tidak ke tengah */
+    justify-content: flex-start;
+    gap: 40px 0; /* Memberi jarak vertikal antar baris */
+  }
+
+  .footer-column {
+    /* Paksa lebar jadi 50% supaya 1 baris hanya isi 2 kolom */
+    flex: 0 0 50%;
+  }
+}
+
+/* Mobile Mode */
+@media (max-width: 600px) {
+  .footer-column {
+    flex: 0 0 100%;
+  }
+
+  #more {
+    display: none !important; /*tombol Learn More hilang*/
+  }
+}
+
+/* --- Tampilan Desktop --- */
+.custom-banner {
+  padding: 60px 0; /* Sesuaikan angka ini untuk posisi vertikal keseluruhan */
+}
+
+.title-text {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+.desc-text {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+  margin: 0 30px;
+}
+
+/* --- Tampilan Tablet & Mobile (Garis Hilang & Naik) --- */
+@media (max-width: 992px) {
+  #wedo {
+    flex-direction: column !important; /* Susun ke bawah */
+    align-items: center !important; /* Tengah horizontal */
+    text-align: center; /* Teks tengah */
+    margin-top: 0 !important; /* Hapus margin atas */
+  }
+
+  .divider {
+    display: none !important; /* Garis vertikal hilang */
+  }
+
+  .title-text {
+    font-size: 32px; /* Ukuran teks lebih kecil di HP */
+    margin-bottom: 10px; /* Jarak antar teks */
+  }
+
+  .desc-text {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  #meetus {
+    align-items: center !important; /* Tengah horizontal */
+    text-align: center; /* Teks tengah */
+    margin-top: 0 !important; /* Hapus margin atas */
+  }
+}
+@media (max-width: 765px) {
+  #more {
+    display: none !important; /*tombol Learn More hilang*/
+  }
+  .coffee {
+    text-align: center;
+  }
+  .navbar-toggler {
+    outline: none !important; /* Menghilangkan garis biru saat diklik */
+    box-shadow: none !important; /* Menghilangkan shadow bawaan */
+  }
 }

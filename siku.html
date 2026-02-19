@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siku</title>
+
+    <!-- style start -->
+
+    <style>
+      /* Container pembungkus harus punya ukuran pasti agar logo TIDAK bergerak */
+      .corner-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 110px; /* Sesuaikan: Lebar total saat siku melebar */
+        height: 110px; /* Sesuaikan: Tinggi total saat siku melebar */
+        transition: all 0.4s ease;
+      }
+
+      /* Base style siku */
+      .corner {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #ffc107;
+        transition: all 0.4s ease-in-out;
+      }
+
+      /* POSISI AWAL (Melebar/Jauh) */
+      .top-left {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+      }
+      .top-right {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+      }
+      .bottom-left {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+      }
+      .bottom-right {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+      }
+
+      /* --- LOGIKA HOVER TEGAS --- */
+
+      /* Saat hover, kita paksa posisi siku mendekat ke tengah (ikon) */
+      /* Karena lebar ikon 60px, kita dekatkan siku ke posisi sekitar 15-20% dari tepi */
+
+      .service-item:hover .top-left {
+        top: 15px;
+        left: 15px;
+      }
+      .service-item:hover .top-right {
+        top: 15px;
+        right: 15px;
+      }
+      .service-item:hover .bottom-left {
+        bottom: 15px;
+        left: 15px;
+      }
+      .service-item:hover .bottom-right {
+        bottom: 15px;
+        right: 15px;
+      }
+
+      /* Pastikan logo tetap diam tanpa gangguan */
+      .service-item img {
+        display: block;
+        transition: none; /* Logo tidak boleh bergerak */
+      }
+    </style>
+
+    <!-- style finish -->
+  </head>
+  <body>
+    <div class="col text-center">
+      <div class="service-item p-4">
+        <div class="service-icon mb-4 d-flex justify-content-center">
+          <div class="corner-wrapper">
+            <span class="corner top-left"></span>
+            <span class="corner top-right"></span>
+            <span class="corner bottom-left"></span>
+            <span class="corner bottom-right"></span>
+            <img
+              src="asset/img/settings-1.png"
+              alt="Icon"
+              style="width: 60px"
+            />
+          </div>
+        </div>
+        <h4 class="fw-bold">Custom Software Development</h4>
+        <p class="text-muted small">Deskripsi Anda di sini...</p>
+      </div>
+    </div>
+  </body>
+</html>
