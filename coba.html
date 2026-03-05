@@ -12,7 +12,7 @@
     <!-- Header -->
     <div class="container-fluid ps-5 d-none d-lg-block" style="margin-top: 5px">
       <div class="row justify-content-between align-items-center">
-        <!-- <div class="col-md-4 d-flex"> -->
+      
         <div class="col-auto d-flex align-items-center">
           <img
             src="asset/img/logo-treemas.png"
@@ -58,7 +58,6 @@
     <!-- End Header -->
 
     <!-- Navbar Start -->
-    <!-- <nav class="navbar navbar-expand-lg mt-2 sticky-top"> -->
     <nav class="navbar navbar-expand-lg mt-2 sticky-top">
       <div class="container-fluid">
         <button
@@ -85,7 +84,6 @@
           style="width: 280px"
         >
           <div class="offcanvas-header">
-            <!-- <h5 class="offcanvas-title">Menu</h5> -->
             <button
               type="button"
               class="btn-close"
@@ -151,7 +149,7 @@
           aria-label="Slide 2"
         ></button>
       </div>
-      <!-- ENDIndicators/dots -->
+      <!-- END Indicators/dots -->
 
       <div class="carousel-inner swiper-wrapper">
         <div class="carousel-item active">
@@ -167,10 +165,12 @@
               Manageable, Accountable <br />
               Simplicity, High Quality
             </h1>
-            <!-- <h1 class="display-5 fw-bold mb-4 pe-3 fs-1 fs-md-2 fs-lg-1 text-responsive">Simplicity, High Quality</h1> -->
 
             <div>
-              <a href="#" class="btn btn-warning btn-lg px-4 fw-bold text-white"
+              <a
+                href="#"
+                class="btn btn-warning btn-lg px-4 fw-bold text-white"
+                id="ourservice"
                 >Our Services</a
               >
               <a href="#" class="btn btn-outline-light btn-lg px-4" id="more"
@@ -198,7 +198,10 @@
               Yes, we do design, analyze, code and coffee
             </p>
             <div>
-              <a href="#" class="btn btn-warning btn-lg px-4 fw-bold text-white"
+              <a
+                href="#"
+                class="btn btn-warning btn-lg px-4 fw-bold text-white"
+                id="meetus"
                 >Meet Us</a
               >
             </div>
@@ -208,8 +211,8 @@
 
       <button class="carousel-control-prev" data-bs-target="#">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <!-- <span class="visually-hidden">Previous</span> -->
       </button>
+
       <button
         class="carousel-control-next"
         type="button"
@@ -220,11 +223,6 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!-- javascrip logo client -->
-
-    <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- javascrip logo client -->
 
     <!-- End Gambar carousel Start -->
 
@@ -232,6 +230,7 @@
 
     <div class="container my-5 py-5">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+
         <!-- TEAM Custom Software Development -->
         <div class="col text-center">
           <div class="service-item p-4">
@@ -367,14 +366,7 @@
         <h1 class="fw-bold display-5">About Us</h1>
       </div>
       <div
-        class="container-fluid d-flex justify-content-center align-items-center"
-        style="
-          background-color: #ffe600;
-          width: 60px;
-          height: 3px;
-          opacity: 1;
-          margin-bottom: 25px;
-        "
+        class="container-fluid d-flex justify-content-center align-items-center" id="gariskuning"
       ></div>
 
       <div
@@ -565,39 +557,25 @@
         />
         <p>
           We partake actively in the build and develop the Information
-          Technology Professionals sector in Indonesia...
+          Technology Professionals sector in Indonesia so that they can be a
+          master in their own house!
         </p>
       </div>
 
       <div class="footer-column">
         <h3>Contact info</h3>
-        <div
-          style="
-            background-color: rgba(0, 0, 47, 0.493);
-            width: 300px;
-            height: 1px;
-            opacity: 1;
-            margin-bottom: 25px;
-          "
-        ></div>
+        <div class="kontak"></div>
         <div class="contact-list">
           <span>📞 (62) 21 3892 9071</span>
           <span>📧 info@treemas.com</span>
-          <span>📍 Jl. Bougenville II Blok B9 No.5...</span>
+          <span class="fw-bold">📍 Jl. Bougenville II Blok B9 No.5 </span>
+          <span class="ms-4 fs-6">Melati Mas, Tangerang Selatan 15310 </span>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Technologies</h3>
-        <div
-          style="
-            background-color: rgba(0, 0, 47, 0.493);
-            width: 300px;
-            height: 1px;
-            opacity: 1;
-            margin-bottom: 25px;
-          "
-        ></div>
+        <div class="teknologi"></div>
         <div class="tech-list">
           <span>BM AS400</span>
           <span>Java</span>
@@ -608,25 +586,9 @@
       </div>
     </footer>
 
-    <!-- end contact kami -->
-
-    <!-- end client logo -->
+    <!-- End Kontak -->
   </body>
-  <!-- javascrip logo client -->
-
+  <!-- javascript -->
   <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  <!-- javascrip logo client -->
 
-  <!-- start hak akses halaman web javascript -->
-  <!-- <script>
-        // Cek status login saat halaman dimuat
-        const token = localStorage.getItem("userToken");
-        
-        if (!token) {
-        // Jika tidak ada token, langsung tendang ke halaman login
-        alert("Akses ditolak! Silakan login terlebih dahulu.");
-        window.location.href = "login.html";
-    }
-    </script> -->
-  <!-- end hak akses halaman web javascript -->
 </html>
