@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiline String</title>
+</head>
+  <body>
+    <script>
+
+      const name = "Budy Hartanto";
+      const firstName = "Budy";
+      const middleName = "Hartanto";
+      const lastName = "Jaya";
+      const template = `Name : ${firstName} ${middleName} ${lastName}`; // cara modern
+      const lama = "Name : " + firstName + " " + middleName + " " + lastName; //cara lama
+
+      console.info(template);
+
+      const nilai = 50;
+      const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+      console.info(template2); 
+      
+      const multiline = `Nama saya Buday,
+Sekarang Kerja, 
+Sering juga bikin konten programming,
+Kalo lagi malas paling tidur`;
+      
+
+      document.writeln("<pre>");
+      document.writeln(multiline);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

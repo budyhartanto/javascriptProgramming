@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+
+      const name = "Budy Hartanto";
+      const firstName = "Budy";
+      const middleName = "Hartanto";
+      const lastName = "Jaya";
+      const template = `Name : ${firstName} ${middleName} ${lastName}`; // cara modern
+      const lama = "Name : " + firstName + " " + middleName + " " + lastName; //cara lama
+
+      console.info(template);
+
+      const nilai = 50;
+      const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+      console.info(template2);  
+    </script>
+  </body>
+</html>

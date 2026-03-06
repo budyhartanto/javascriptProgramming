@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+
+        const orang = {
+            "nama lengkap" : "Budy Hartanto",
+            alamat: "Indonesia",
+            umur : 28
+        };
+
+        // ubah properti / atribute
+        // person["nama"] = "Buday Hartanto";
+        // person["alamat"] = "Indonesia";
+        // person["umur"] = "28";
+
+        console.info(`nama : ${orang["nama lengkap"]}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur: ${orang.umur}`);
+
+        console.table(orang);
+
+        delete orang["umur"];
+
+        console.table(orang);
+
+    </script>
+</body>
+</html>
